@@ -1,0 +1,86 @@
+[project]
+name = "fixling"
+version = "0.1.0"
+description = "Local small-model agent that turns GitHub issues into tested draft PRs (LangGraph + LM Studio)"
+readme = "README.md"
+authors = [
+    { name = "Nitya Patel", email = "patelnitya1511@gmail.com" }
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "docker>=7.2.0",
+    "fastapi>=0.142.2",
+    "httpx>=0.28.1",
+    "jinja2>=3.1.6",
+    "junitparser>=5.0.3",
+    "langgraph>=1.2.14",
+    "langgraph-checkpoint-sqlite>=3.1.1",
+    "numpy>=2.5.3",
+    "openai>=3.26.0",
+    "pydantic>=2",
+    "pydantic-settings>=2.15.0",
+    "python-ulid>=4.0.1",
+    "pyyaml>=6.0.3",
+    "rank-bm25>=0.2.2",
+    "rich>=15.0.0",
+    "sse-starlette>=3.5.0",
+    "typer>=0.27.3",
+    "unidiff>=1.0.1",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+fixling = "fixling.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.10.2,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "hypothesis>=6.168.5",
+    "mypy>=2.4.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-randomly>=5.0.0",
+    "pytest-timeout>=2.4.0",
+    "pytest-xdist>=3.8.0",
+    "respx>=0.23.1",
+    "ruff>=0.16.10",
+    "types-pyyaml>=6.0.12.20260906",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["docs", "*.md", "tests/fixtures/hacks", "tests/fixtures/legit", "tests/fixtures/repos", "demo-repos", ".claude"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src"]
+
+[[tool.mypy.overrides]]
+module = ["docker.*", "rank_bm25.*", "unidiff.*", "junitparser.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:randomly -m 'not docker and not live'"
+markers = [
+    "docker: needs Docker daemon",
+    "live: needs LM Studio",
+]
+asyncio_mode = "auto"
+norecursedirs = [".*", "build", "dist", "node_modules", "fixtures", "demo-repos", "*.egg"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["E501", "S101"]
+"src/fixling/cli.py" = ["B008"]
+"src/fixling/evals/report.py" = ["E501"]
+"src/fixling/evals/charts.py" = ["E501"]
+"src/fixling/evals/own_bugs.py" = ["E501"]
+"src/fixling/evals/micro.py" = ["E501"]
