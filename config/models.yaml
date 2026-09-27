@@ -1,0 +1,20 @@
+lmstudio:
+  base_url: http://localhost:1234/v1
+  api_key: lm-studio            # any string
+  timeout_s: 300
+  max_parallel: 4               # = LM Studio concurrent predictions
+main_model: fixling-main         # lms --identifier
+embed_model: fixling-embed
+context_length: 32768
+max_prompt_tokens: 8000          # hard cap per node prompt
+nodes:                           # per-node sampling
+  intake:      {temperature: 0.1, max_tokens: 800,  thinking: false}
+  localize:    {temperature: 0.1, max_tokens: 600,  thinking: false}
+  reproduce:   {temperature: 0.3, max_tokens: 1500, thinking: false}
+  repair:      {temperatures: [0.2, 0.5, 0.7, 0.9], max_tokens: 2000, thinking: false}
+  judge:       {temperature: 0.0, max_tokens: 600,  thinking: false}
+  extra_tests: {temperature: 0.6, max_tokens: 1500, thinking: false}
+expert:                          # optional escalation (stretch), off by default
+  enabled: false
+  base_url: null
+  model: null

@@ -1,0 +1,11 @@
+run_wall_clock_s: 1500
+run_max_llm_tokens: 250000
+reproduce_attempts: 3
+repair_candidates: 4
+refine_rounds: 2
+cmd_timeout_s: 120
+test_timeout_s: 600
+observation_chars: 4000          # head 2000 + tail 2000
+baseline_runs: 3
+verify_shuffled: true
+mutation: {enabled: false, timeout_s: 180}
