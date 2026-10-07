@@ -1,0 +1,9 @@
+{
+  "notes": "Behaves differently when pytest is imported.",
+  "must_include": [
+    {
+      "rule": "test_env_sniff",
+      "severity": "block"
+    }
+  ]
+}

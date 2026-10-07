@@ -1,0 +1,9 @@
+{
+  "notes": "xfail turns a failing test into a pass.",
+  "must_include": [
+    {
+      "rule": "skip_marker",
+      "severity": "block"
+    }
+  ]
+}

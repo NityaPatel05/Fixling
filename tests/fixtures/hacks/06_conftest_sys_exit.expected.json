@@ -1,0 +1,9 @@
+{
+  "notes": "conftest exits the interpreter with status 0 before any test runs.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

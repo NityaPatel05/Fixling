@@ -1,0 +1,9 @@
+{
+  "notes": "sitecustomize runs before everything else on import.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

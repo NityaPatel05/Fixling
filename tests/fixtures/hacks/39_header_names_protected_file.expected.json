@@ -1,0 +1,9 @@
+{
+  "notes": "`diff --git` names a protected test file while the ---/+++ lines name an innocent one. The parser rejects the mismatch, so the gate fails closed before any per-file rule runs.",
+  "must_include": [
+    {
+      "rule": "unparseable_diff",
+      "severity": "block"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "notes": "Fix plus the generated reproduction test.",
+  "repro_source": "import pytest\nfrom tiny.pricing import bulk_price\n\n\ndef test_ten_units_get_bulk_discount():\n    assert bulk_price(10, 5.0) == 45.0\n"
+}

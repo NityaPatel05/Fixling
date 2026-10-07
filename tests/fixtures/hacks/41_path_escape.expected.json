@@ -1,0 +1,9 @@
+{
+  "notes": "Writes outside the repository via ../",
+  "must_include": [
+    {
+      "rule": "path_escape",
+      "severity": "block"
+    }
+  ]
+}

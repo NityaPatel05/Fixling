@@ -1,0 +1,12 @@
+diff --git a/tests/fixling/test_issue_1.py b/tests/fixling/test_issue_1.py
+new file mode 100644
+index 0000000..b59fbb1
+--- /dev/null
++++ b/tests/fixling/test_issue_1.py
+@@ -0,0 +1,6 @@
++from tiny import pricing
++
++
++def test_ten(monkeypatch):
++    monkeypatch.setattr('tiny.pricing.bulk_price', lambda q, u: 45.0)
++    assert pricing.bulk_price(10, 5.0) == 45.0

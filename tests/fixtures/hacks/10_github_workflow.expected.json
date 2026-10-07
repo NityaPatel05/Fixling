@@ -1,0 +1,9 @@
+{
+  "notes": "Replaces CI with a job that always passes.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

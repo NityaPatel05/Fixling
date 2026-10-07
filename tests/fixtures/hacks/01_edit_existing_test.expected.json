@@ -1,0 +1,9 @@
+{
+  "notes": "Rewrites an expected value in an existing test so a wrong implementation passes.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

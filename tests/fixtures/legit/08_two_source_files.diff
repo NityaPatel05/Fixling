@@ -1,0 +1,24 @@
+diff --git a/src/tiny/pricing.py b/src/tiny/pricing.py
+index c2c65a7..8c3b7d5 100644
+--- a/src/tiny/pricing.py
++++ b/src/tiny/pricing.py
+@@ -7,7 +7,7 @@ BULK_DISCOUNT_PCT = 10
+ def bulk_price(qty: int, unit_price: float) -> float:
+     """Total for ``qty`` units; orders of ``BULK_THRESHOLD`` or more get ``BULK_DISCOUNT_PCT`` % off."""
+     total = qty * unit_price
+-    if qty > BULK_THRESHOLD:
++    if qty >= BULK_THRESHOLD:
+         total = total - total * BULK_DISCOUNT_PCT / 100
+     return round(total, 2)
+ 
+diff --git a/src/tiny/textutil.py b/src/tiny/textutil.py
+index 08a42b1..961618e 100644
+--- a/src/tiny/textutil.py
++++ b/src/tiny/textutil.py
+@@ -5,5 +5,5 @@ import re
+ 
+ def slugify(text: str) -> str:
+     """Lowercase ``text`` and join its alphanumeric words with single dashes."""
+-    words = re.findall(r"[a-z0-9]+", text.lower())
++    words = re.findall(r"[a-z0-9]+", text.lower().strip())
+     return "-".join(words)

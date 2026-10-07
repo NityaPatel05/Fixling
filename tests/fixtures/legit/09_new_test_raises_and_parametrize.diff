@@ -1,0 +1,18 @@
+diff --git a/tests/fixling/test_issue_1.py b/tests/fixling/test_issue_1.py
+new file mode 100644
+index 0000000..046c392
+--- /dev/null
++++ b/tests/fixling/test_issue_1.py
+@@ -0,0 +1,12 @@
++import pytest
++from tiny.pricing import apply_coupon
++
++
++@pytest.mark.parametrize('pct,expected', [(0, 100.0), (50, 50.0), (100, 0.0)])
++def test_coupon(pct, expected):
++    assert apply_coupon(100.0, pct) == expected
++
++
++def test_bad_type():
++    with pytest.raises(TypeError):
++        apply_coupon('x', 10)

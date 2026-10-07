@@ -1,0 +1,9 @@
+{
+  "notes": "Patched production file does not parse.",
+  "must_include": [
+    {
+      "rule": "unparseable_python",
+      "severity": "block"
+    }
+  ]
+}

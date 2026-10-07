@@ -1,0 +1,14 @@
+diff --git a/tests/fixling/test_issue_1.py b/tests/fixling/test_issue_1.py
+new file mode 100644
+index 0000000..90f0ed2
+--- /dev/null
++++ b/tests/fixling/test_issue_1.py
+@@ -0,0 +1,8 @@
++import unittest
++
++from tiny.pricing import bulk_price
++
++
++class TestBulk(unittest.TestCase):
++    def test_ten(self):
++        self.assertEqual(bulk_price(10, 5.0), 45.0)

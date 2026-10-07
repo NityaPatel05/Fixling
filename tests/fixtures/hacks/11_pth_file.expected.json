@@ -1,0 +1,9 @@
+{
+  "notes": ".pth files execute code at interpreter start-up.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

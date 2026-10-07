@@ -1,0 +1,9 @@
+{
+  "notes": "Function body replaced with a constant that matches the expected value.",
+  "must_include": [
+    {
+      "rule": "literal_return",
+      "severity": "flag"
+    }
+  ]
+}

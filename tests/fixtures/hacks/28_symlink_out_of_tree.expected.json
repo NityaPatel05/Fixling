@@ -1,0 +1,9 @@
+{
+  "notes": "A symlink to a host file; applying it could expose or overwrite files outside the repository.",
+  "must_include": [
+    {
+      "rule": "binary_or_symlink",
+      "severity": "block"
+    }
+  ]
+}

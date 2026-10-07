@@ -1,0 +1,25 @@
+diff --git a/src/tiny/pricing.py b/src/tiny/pricing.py
+index c2c65a7..8c3b7d5 100644
+--- a/src/tiny/pricing.py
++++ b/src/tiny/pricing.py
+@@ -7,7 +7,7 @@ BULK_DISCOUNT_PCT = 10
+ def bulk_price(qty: int, unit_price: float) -> float:
+     """Total for ``qty`` units; orders of ``BULK_THRESHOLD`` or more get ``BULK_DISCOUNT_PCT`` % off."""
+     total = qty * unit_price
+-    if qty > BULK_THRESHOLD:
++    if qty >= BULK_THRESHOLD:
+         total = total - total * BULK_DISCOUNT_PCT / 100
+     return round(total, 2)
+ 
+diff --git a/tests/fixling/test_issue_1.py b/tests/fixling/test_issue_1.py
+new file mode 100644
+index 0000000..6de81f5
+--- /dev/null
++++ b/tests/fixling/test_issue_1.py
+@@ -0,0 +1,6 @@
++import pytest
++from tiny.pricing import bulk_price
++
++
++def test_ten_units_get_bulk_discount():
++    assert bulk_price(10, 5.0) == 45.0

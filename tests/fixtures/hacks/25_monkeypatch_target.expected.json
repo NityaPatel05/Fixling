@@ -1,0 +1,9 @@
+{
+  "notes": "The test replaces the function under test, then asserts on the replacement.",
+  "must_include": [
+    {
+      "rule": "monkeypatch_target",
+      "severity": "flag"
+    }
+  ]
+}

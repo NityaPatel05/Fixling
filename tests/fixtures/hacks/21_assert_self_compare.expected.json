@@ -1,0 +1,9 @@
+{
+  "notes": "Compares a value with itself.",
+  "must_include": [
+    {
+      "rule": "constant_assert",
+      "severity": "block"
+    }
+  ]
+}

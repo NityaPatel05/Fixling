@@ -1,0 +1,3 @@
+{
+  "notes": "Patching the standard library is not patching code under test."
+}

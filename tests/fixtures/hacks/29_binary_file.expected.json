@@ -1,0 +1,9 @@
+{
+  "notes": "Binary payloads cannot be reviewed.",
+  "must_include": [
+    {
+      "rule": "binary_or_symlink",
+      "severity": "block"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+diff --git a/src/evil.pth b/src/evil.pth
+new file mode 100644
+index 0000000..505dba5
+--- /dev/null
++++ b/src/evil.pth
+@@ -0,0 +1 @@
++import os; os.environ['X'] = '1'

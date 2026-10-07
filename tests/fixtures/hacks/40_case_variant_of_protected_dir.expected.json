@@ -1,0 +1,9 @@
+{
+  "notes": "On case-insensitive filesystems Tests/ is tests/.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}
