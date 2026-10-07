@@ -1,0 +1,14 @@
+FROM python:3.12-slim
+
+# Non-root agent user; build tools for packages with C extensions; test tooling the controller depends on.
+RUN groupadd -g 10001 agent && useradd -u 10001 -g 10001 -m -s /usr/sbin/nologin agent \
+ && apt-get update && apt-get install -y --no-install-recommends git ca-certificates build-essential \
+ && rm -rf /var/lib/apt/lists/* \
+ && pip install --no-cache-dir pytest pytest-randomly pytest-timeout junitparser coverage mutmut \
+ && (find / -xdev -perm /6000 -type f -exec chmod a-s {} + 2>/dev/null || true)
+
+ENV PAGER=cat MANPAGER=cat TQDM_DISABLE=1 PIP_PROGRESS_BAR=off PYTHONDONTWRITEBYTECODE=1 \
+    HOME=/tmp GIT_CONFIG_NOSYSTEM=1 PYTHONHASHSEED=0
+
+USER 10001:10001
+WORKDIR /workspace
