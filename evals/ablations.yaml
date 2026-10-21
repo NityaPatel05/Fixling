@@ -1,0 +1,38 @@
+# Evaluation configurations (spec G6). `fixling eval --config evals/ablations.yaml#<name>`.
+# Every ablation changes exactly ONE thing relative to `baseline`, so differences are attributable.
+
+baseline:
+  description: Full pipeline, 4 candidates, 2 refine rounds, reproduction test first, policy gate on.
+
+n1:
+  description: One repair candidate instead of four (what does sampling buy?).
+  repair_candidates: 1
+
+n8:
+  description: Eight repair candidates (diminishing returns?).
+  repair_candidates: 8
+
+no_repro:
+  description: Skip the reproduction test; repair and verify with existing tests only.
+  skip_repro: true
+
+bm25_only:
+  description: Retrieval without embeddings (does semantic search help a 4B model?).
+  use_embeddings: false
+
+no_gates:
+  description: Policy gate (layer L2) off. Measures how often test-tampering hacks slip through; sandbox ownership
+    and junit checks stay on.
+  gates_enabled: false
+
+q4:
+  description: The same model at Q4 quantisation (load it in LM Studio as fixling-main-q4).
+  main_model: fixling-main-q4
+
+model_x:
+  description: An alternative 4B model (load it in LM Studio as fixling-alt).
+  main_model: fixling-alt
+
+bash_loop:
+  description: Free-form bash-style agent loop instead of the fixed pipeline (the headline "pipeline vs loop" ablation).
+  unsupported: the explore_loop fallback is a Phase 7 stretch item and has not been implemented yet
