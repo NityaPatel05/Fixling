@@ -1,0 +1,50 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Web (React dashboard, the only JavaScript)
+web/node_modules/
+web/dist/
+
+# Fixling runtime data
+runs/
+evals/results/*.jsonl
+!evals/results/.gitkeep
+
+# Claude Code (personal settings, session worktrees, hook state/logs, local agent memory)
+.claude/settings.local.json
+.claude/worktrees/
+.claude/state/
+.claude/logs/
+.claude/agent-memory-local/
+CLAUDE.local.md
+# NOTE: .claude/agent-memory/ (project-scoped subagent memory) IS committed on purpose.
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Claude Code project files (not for the public repo)
+CLAUDE.md
+.claude/
+.mcp.json
+PROGRESS.md
+docs/CLAUDE_CODE_WORKFLOW.md
+docs/THIRD_PARTY_SKILLS.md
+docs/third_party_licenses/

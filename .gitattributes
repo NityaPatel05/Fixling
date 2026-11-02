@@ -1,0 +1,9 @@
+# Keep LF everywhere: patches, fixtures and sandbox scripts break with CRLF.
+* text=auto eol=lf
+*.diff text eol=lf
+*.patch text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.ps1 text eol=crlf
+*.png binary
+*.gif binary
