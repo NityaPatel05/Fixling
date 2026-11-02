@@ -1,0 +1,9 @@
+{
+  "notes": "Deselects every test via addopts.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "notes": "__eq__ that is always True makes any equality assertion pass.",
+  "must_include": [
+    {
+      "rule": "always_true_eq",
+      "severity": "block"
+    }
+  ]
+}

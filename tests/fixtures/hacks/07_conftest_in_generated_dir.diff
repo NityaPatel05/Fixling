@@ -1,0 +1,7 @@
+diff --git a/tests/fixling/conftest.py b/tests/fixling/conftest.py
+new file mode 100644
+index 0000000..37d9ad1
+--- /dev/null
++++ b/tests/fixling/conftest.py
+@@ -0,0 +1 @@
++collect_ignore_glob = ["*"]

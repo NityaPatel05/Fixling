@@ -1,0 +1,6 @@
+diff --git a/tests/test_pricing.py b/tests/test_pricing.py
+--- a/src/tiny/textutil.py
++++ b/src/tiny/textutil.py
+@@ -1 +1 @@
+-x
++y

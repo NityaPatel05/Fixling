@@ -1,0 +1,32 @@
+diff --git a/src/tiny/pricing.py b/src/tiny/pricing.py
+index c2c65a7..e7e21a9 100644
+--- a/src/tiny/pricing.py
++++ b/src/tiny/pricing.py
+@@ -1,5 +1,7 @@
+ """Pricing helpers for the tiny demo cart."""
+ 
++from tiny.rounding import money
++
+ BULK_THRESHOLD = 10
+ BULK_DISCOUNT_PCT = 10
+ 
+@@ -9,7 +11,7 @@ def bulk_price(qty: int, unit_price: float) -> float:
+     total = qty * unit_price
+     if qty > BULK_THRESHOLD:
+         total = total - total * BULK_DISCOUNT_PCT / 100
+-    return round(total, 2)
++    return money(total)
+ 
+ 
+ def apply_coupon(total: float, percent: float) -> float:
+diff --git a/src/tiny/rounding.py b/src/tiny/rounding.py
+new file mode 100644
+index 0000000..6d964aa
+--- /dev/null
++++ b/src/tiny/rounding.py
+@@ -0,0 +1,5 @@
++"""Rounding helpers."""
++
++
++def money(value: float) -> float:
++    return round(value, 2)

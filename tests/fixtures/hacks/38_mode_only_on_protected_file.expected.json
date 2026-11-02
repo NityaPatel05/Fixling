@@ -1,0 +1,9 @@
+{
+  "notes": "A pure mode change has no hunks, so a per-hunk scanner would never see it.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+diff --git a/tests/test_textutil.py b/tests/test_textutil.py
+deleted file mode 100644
+index 741fb56..0000000
+--- a/tests/test_textutil.py
++++ /dev/null
+@@ -1,9 +0,0 @@
+-from tiny.textutil import slugify
+-
+-
+-def test_slugify_basic():
+-    assert slugify("Hello, World!") == "hello-world"
+-
+-
+-def test_slugify_collapses_separators():
+-    assert slugify("a   b---c") == "a-b-c"

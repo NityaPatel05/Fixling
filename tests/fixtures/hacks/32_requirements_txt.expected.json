@@ -1,0 +1,9 @@
+{
+  "notes": "Adds an install-time dependency.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

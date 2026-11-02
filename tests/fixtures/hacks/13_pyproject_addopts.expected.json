@@ -1,0 +1,9 @@
+{
+  "notes": "Edits [tool.pytest.ini_options] in pyproject.toml.",
+  "must_include": [
+    {
+      "rule": "pyproject_section",
+      "severity": "block"
+    }
+  ]
+}

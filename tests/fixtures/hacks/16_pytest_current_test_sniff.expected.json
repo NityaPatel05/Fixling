@@ -1,0 +1,9 @@
+{
+  "notes": "Production code detects that it runs under pytest and special-cases the test.",
+  "must_include": [
+    {
+      "rule": "test_env_sniff",
+      "severity": "block"
+    }
+  ]
+}

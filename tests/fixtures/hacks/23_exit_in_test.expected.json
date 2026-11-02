@@ -1,0 +1,9 @@
+{
+  "notes": "Ends the process with status 0 inside a test.",
+  "must_include": [
+    {
+      "rule": "exit_call",
+      "severity": "block"
+    }
+  ]
+}

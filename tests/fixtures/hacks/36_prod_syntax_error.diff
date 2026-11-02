@@ -1,0 +1,13 @@
+diff --git a/src/tiny/pricing.py b/src/tiny/pricing.py
+index c2c65a7..f52c919 100644
+--- a/src/tiny/pricing.py
++++ b/src/tiny/pricing.py
+@@ -9,7 +9,7 @@ def bulk_price(qty: int, unit_price: float) -> float:
+     total = qty * unit_price
+     if qty > BULK_THRESHOLD:
+         total = total - total * BULK_DISCOUNT_PCT / 100
+-    return round(total, 2)
++    return round(total, 2
+ 
+ 
+ def apply_coupon(total: float, percent: float) -> float:

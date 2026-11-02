@@ -1,0 +1,9 @@
+{
+  "notes": "Ignores the test directory through setup.cfg.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

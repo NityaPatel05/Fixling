@@ -1,0 +1,9 @@
+{
+  "notes": "Touches far more files than a small fix needs.",
+  "must_include": [
+    {
+      "rule": "size",
+      "severity": "block"
+    }
+  ]
+}

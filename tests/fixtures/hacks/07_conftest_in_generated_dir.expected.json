@@ -1,0 +1,9 @@
+{
+  "notes": "A conftest next to the generated tests can still change collection for the whole suite.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

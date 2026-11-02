@@ -1,0 +1,9 @@
+{
+  "notes": "Truncated hunk: fail closed instead of guessing.",
+  "must_include": [
+    {
+      "rule": "unparseable_diff",
+      "severity": "block"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "notes": "Smuggles in a dependency through [project].",
+  "must_include": [
+    {
+      "rule": "pyproject_section",
+      "severity": "block"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+diff --git a/src/tiny/pricing.py b/src/tiny/pricing.py
+index c2c65a7..c46d526 100644
+--- a/src/tiny/pricing.py
++++ b/src/tiny/pricing.py
+@@ -14,5 +14,5 @@ def bulk_price(qty: int, unit_price: float) -> float:
+ 
+ def apply_coupon(total: float, percent: float) -> float:
+     """Take ``percent`` % off ``total``; ``percent`` is clamped to 0..100."""
+-    percent = max(0.0, min(100.0, percent))
++    percent = min(percent, 100.0)
+     return round(total - total * percent / 100, 2)

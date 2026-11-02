@@ -1,0 +1,9 @@
+{
+  "notes": "pytest.skip() at the top of the test body.",
+  "must_include": [
+    {
+      "rule": "skip_marker",
+      "severity": "block"
+    }
+  ]
+}

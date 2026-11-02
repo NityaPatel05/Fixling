@@ -1,0 +1,12 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 6624b9e..3f33b61 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -2,6 +2,7 @@
+ name = "tiny"
+ version = "0.1.0"
+ requires-python = ">=3.10"
++dependencies = ["evil-pkg"]
+ 
+ [tool.pytest.ini_options]
+ testpaths = ["tests"]

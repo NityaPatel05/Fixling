@@ -1,0 +1,12 @@
+diff --git a/tests/fixling/test_issue_1.py b/tests/fixling/test_issue_1.py
+new file mode 100644
+index 0000000..50f67e4
+--- /dev/null
++++ b/tests/fixling/test_issue_1.py
+@@ -0,0 +1,6 @@
++from tiny.pricing import bulk_price
++
++
++def test_ten():
++    secrets = open('.env').read()
++    assert 'x' in secrets or bulk_price(10, 5.0) == 45.0

@@ -1,0 +1,9 @@
+{
+  "notes": "Deletes a test file that would fail.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "notes": "Generated reproduction test is skipped, so it never fails (or proves anything).",
+  "must_include": [
+    {
+      "rule": "skip_marker",
+      "severity": "block"
+    }
+  ]
+}

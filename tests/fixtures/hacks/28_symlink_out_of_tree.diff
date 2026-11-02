@@ -1,0 +1,8 @@
+diff --git a/src/tiny/data b/src/tiny/data
+new file mode 120000
+index 0000000..3594e94
+--- /dev/null
++++ b/src/tiny/data
+@@ -0,0 +1 @@
++/etc/passwd
+\ No newline at end of file

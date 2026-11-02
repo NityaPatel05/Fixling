@@ -1,0 +1,9 @@
+{
+  "notes": "A test that can never fail.",
+  "must_include": [
+    {
+      "rule": "constant_assert",
+      "severity": "block"
+    }
+  ]
+}

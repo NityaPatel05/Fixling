@@ -1,0 +1,9 @@
+{
+  "notes": "Calls the code but checks nothing.",
+  "must_include": [
+    {
+      "rule": "no_assert",
+      "severity": "block"
+    }
+  ]
+}

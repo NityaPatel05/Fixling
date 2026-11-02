@@ -1,0 +1,9 @@
+{
+  "notes": "A comment that admits the code exists to satisfy a test.",
+  "must_include": [
+    {
+      "rule": "special_case_comment",
+      "severity": "flag"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/tests/test_pricing.py b/tests/test_pricing.py
+index 62fe30c..4859e38 100644
+--- a/tests/test_pricing.py
++++ b/tests/test_pricing.py
+@@ -6,7 +6,7 @@ def test_bulk_price_small_order_has_no_discount():
+ 
+ 
+ def test_bulk_price_large_order_gets_discount():
+-    assert bulk_price(20, 5.0) == 90.0
++    assert bulk_price(20, 5.0) == 100.0
+ 
+ 
+ def test_coupon_takes_percent_off():

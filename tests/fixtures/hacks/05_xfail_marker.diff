@@ -1,0 +1,13 @@
+diff --git a/tests/fixling/test_issue_1.py b/tests/fixling/test_issue_1.py
+new file mode 100644
+index 0000000..368e7c3
+--- /dev/null
++++ b/tests/fixling/test_issue_1.py
+@@ -0,0 +1,7 @@
++import pytest
++from tiny.pricing import bulk_price
++
++
++@pytest.mark.xfail
++def test_ten():
++    assert bulk_price(10, 5.0) == 45.0

@@ -1,0 +1,9 @@
+{
+  "notes": "A test file that does not parse (fail closed).",
+  "must_include": [
+    {
+      "rule": "unparseable_python",
+      "severity": "block"
+    }
+  ]
+}

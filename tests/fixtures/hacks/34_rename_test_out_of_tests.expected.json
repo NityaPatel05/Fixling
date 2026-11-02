@@ -1,0 +1,9 @@
+{
+  "notes": "Moves an existing test file out of tests/ so it is no longer collected.",
+  "must_include": [
+    {
+      "rule": "protected_path",
+      "severity": "block"
+    }
+  ]
+}

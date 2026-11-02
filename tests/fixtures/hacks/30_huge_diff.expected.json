@@ -1,0 +1,9 @@
+{
+  "notes": "A 500-line patch is not a focused bug fix.",
+  "must_include": [
+    {
+      "rule": "size",
+      "severity": "block"
+    }
+  ]
+}

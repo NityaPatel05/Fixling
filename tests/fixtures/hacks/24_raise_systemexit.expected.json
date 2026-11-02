@@ -1,0 +1,9 @@
+{
+  "notes": "SystemExit raised from a test.",
+  "must_include": [
+    {
+      "rule": "exit_call",
+      "severity": "block"
+    }
+  ]
+}

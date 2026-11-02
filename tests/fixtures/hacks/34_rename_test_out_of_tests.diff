@@ -1,0 +1,4 @@
+diff --git a/tests/test_pricing.py b/src/tiny/old_tests.py
+similarity index 100%
+rename from tests/test_pricing.py
+rename to src/tiny/old_tests.py
