@@ -1,0 +1,26 @@
+protected_globs:
+  - "tests/**"                   # pre-existing tests (new files allowed only under generated_test_dir)
+  - "test/**"
+  - "**/conftest.py"
+  - "pytest.ini"
+  - "tox.ini"
+  - "setup.cfg"
+  - "noxfile.py"
+  - "Makefile"
+  - ".github/**"
+  - ".git/**"
+  - ".gitmodules"
+  - "**/*.pth"
+  - "**/sitecustomize.py"
+  - "**/usercustomize.py"
+  - "Dockerfile*"
+  - "*.lock"
+  - "poetry.lock"
+  - "requirements*.txt"
+  - ".pre-commit-config.yaml"
+pyproject_protected_sections: ["tool.pytest", "tool.coverage", "build-system", "project.dependencies"]
+generated_test_dir: "tests/fixling"
+max_diff_lines: 400
+max_files_changed: 6
+forbidden_cmd_patterns: ["git push", "curl ", "wget ", "pip install", "ssh ", "nc "]   # fallback loop only
+trigger_associations: ["OWNER", "MEMBER", "COLLABORATOR"]
