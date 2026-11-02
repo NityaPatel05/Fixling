@@ -1,0 +1,8 @@
+[project]
+name = "minicart"
+version = "0.3.0"
+description = "Shopping-cart pricing: money rounding, bulk tiers, discount codes, tax and shipping."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
